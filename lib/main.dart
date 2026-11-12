@@ -51,24 +51,11 @@ class HalamanMenu extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(16),
-            child: Image.network(
-              'https://images.unsplash.com/photo-1608198093002-ad4e00548482?w=1000',
+            child: Image.asset(
+              'assets/images/header.jpg',
               height: 190,
               width: double.infinity,
               fit: BoxFit.cover,
-              loadingBuilder: (context, child, progress) => progress == null
-                  ? child
-                  : SizedBox(
-                      height: 190,
-                      child: Center(
-                        child: CircularProgressIndicator(
-                          value: progress.expectedTotalBytes == null
-                              ? null
-                              : progress.cumulativeBytesLoaded /
-                                  progress.expectedTotalBytes!,
-                        ),
-                      ),
-                    ),
               errorBuilder: (context, error, stackTrace) => Container(
                 height: 190,
                 color: warna.surfaceContainerHighest,
