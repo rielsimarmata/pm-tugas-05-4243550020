@@ -1,4 +1,6 @@
-﻿import 'package:material_ui/material_ui.dart';
+﻿// Impor seragam sesuai spesifikasi tugas; model data tidak memakai widget UI.
+// ignore: unused_import
+import 'package:material_ui/material_ui.dart';
 
 // Model sederhana tanpa state karena hanya menyimpan data menu.
 class MenuItem {
@@ -8,3 +10,4 @@ class MenuItem {
   final int harga;
   final String kategori;
 }
+

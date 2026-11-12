@@ -6,6 +6,9 @@ void main() {
   testWidgets('menu pertama dapat ditandai sebagai favorit', (tester) async {
     await tester.pumpWidget(const MenuUmkmApp());
 
+    await tester.drag(find.byType(ListView), const Offset(0, -600));
+    await tester.pumpAndSettle();
+
     final ikonFavorit = find.byIcon(Icons.favorite_border).first;
     await tester.ensureVisible(ikonFavorit);
     await tester.pumpAndSettle();
@@ -16,3 +19,4 @@ void main() {
     expect(find.textContaining('ditambahkan ke favorit'), findsOneWidget);
   });
 }
+
