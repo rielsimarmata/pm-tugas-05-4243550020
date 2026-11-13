@@ -16,6 +16,7 @@ class MenuUmkmApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Bika Ambon Kak Rosa',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: _warnaBenih)),
       darkTheme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
